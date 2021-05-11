@@ -56,9 +56,10 @@ programa
 		}
 		faca 
 			{
+				imprimePosicoes()
 				imprimeTabuleiro()
-				escreva ("\n123\n456\n789")
-				escreva ("\n\njogador, selecione a posição para jogada: ")
+				escreva ("\nlegenda\n 1|2|3\n 4|5|6\n 7|8|9")
+				escreva ("\n\njogador: "+jogador+", selecione a posição para jogada: ")
 				leia (selecionaPosicao)
 				selecionaPosicao=selecionaPosicao-1 //ajuste para o vetor de 9 posiçoes => 0-8
 				escreva("Posição no vetor: "+selecionaPosicao+"\n")
@@ -174,7 +175,9 @@ programa
 			imprimePosicoes()
 			vencedor=vitoria()
 			controleJogo++
+			limpa()
 		}
+		
 		imprimeTabuleiro()
 		exibeResultado(vencedor)
 	}
